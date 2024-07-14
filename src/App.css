@@ -1,0 +1,234 @@
+body{
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App{
+  min-height: 100vh;
+}
+.App .title{
+  padding: 0 30px ;
+}
+
+.strikethrough{
+  text-decoration: line-through;
+}
+
+/*TODO WRAPPER*/
+.todo-wrapper{
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.todo-header{
+  width: 30%;
+  max-height: 70vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border: 2px solid rgb(70, 70, 70);
+  border-radius: 15px;
+}
+.todo-header h1{
+  margin: 10px 0 20px 0;
+  text-align: center;
+  font-size: xx-large;
+  letter-spacing: normal;
+  font-weight: bold;
+  color: rgb(40, 40, 40);
+}
+
+.list-wrapper{
+  width: 60%;
+}
+
+/*TODO FORM*/
+.TodoForm{
+  display: flex;
+  justify-content: space-between;
+}
+
+.TodoForm .wrapper{
+  width: 90%;
+  border-radius: 15px;  
+  display: flex;
+  flex-direction: column;
+}
+
+
+.TodoForm .wrapper p{
+  margin: 15px 0 0 0;
+  padding: 10px 15px;
+  background-color: rgb(255, 84, 90);
+  border: 2px solid rgb(70, 70, 70);
+  border-radius: 15px;
+  color: rgb(40, 40, 40);
+  font-weight: 600;
+}
+
+.TodoForm .wrapper .input-wrapper{
+  background-color: white;
+  border-radius: 15px;
+  border: 2px solid rgb(70, 70, 70);
+  display: flex;
+  flex-direction: column;
+}
+
+.TodoForm input{
+  font-size: large !important;
+  font-weight: 600;
+  border: none;
+  padding: 15px 15px 0 15px;
+  border-radius: 15px;
+  font-size: 10px;
+  outline: none;
+}
+
+.TodoForm input::placeholder{
+  font-size: large;
+  font-weight: 600;
+}
+
+.TodoForm .input-wrapper textarea{
+  padding: 10px 15px;
+  border-radius: 15px;
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+.TodoForm .button-wrapper{
+  padding: 0 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.TodoForm .todo-btn{
+  border: 2px solid rgb(70, 70, 70);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 10px;
+}
+.TodoForm .todo-btn:hover{
+  background-color: lightgray;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.TodoForm .color-options{
+  margin: 10px 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.TodoForm .color-btn{
+  position: relative;
+  margin: 5px 0px;
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: ease-in-out;
+}
+
+.color-btn.selected{
+  border: 2px solid rgb(70, 70, 70);
+}
+
+/*TODO LIST*/
+.todo-list{
+  margin: 0 0 10px 0;
+  padding: 15px 25px;
+  border-radius: 15px;
+  border: 2px solid rgb(70, 70, 70);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.todo-list h1{
+  margin: 0;
+  padding: 3px 0;
+  color: rgb(40, 40, 40);
+}
+
+.todo-list .description{
+  width: 97%;
+  padding: 10px 0 0 0;
+}
+
+.todo-list .description p{
+  width: 90%;
+  margin: 0 0 10px 0;
+  font-size: small;
+  color: rgb(70, 70, 70);
+}
+
+.todo-list .todo-action{
+  color: black;
+  margin: 0px 5px;
+  padding: 5px 6px;
+  border-radius: 50%;
+  font-weight: lighter;
+  align-items: center;
+}
+
+.todo-list .todo-action-delete{
+  color: black;
+  padding: 5px 8px;
+  border-radius: 50%;
+  font-weight: lighter;
+  align-items: center;
+}
+
+.todo-list .todo-action-delete:hover{
+  background-color: rgba(0, 0, 0, .5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.todo-list .todo-action:hover{
+  background-color: rgba(0, 0, 0, .5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  
+}
+
+.todo-list .todo-list-title{
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-list .todo-list-title .button-group{
+  display: flex;
+}
+
+.todo-list .action-wrapper{
+  color: rgb(40, 40, 40);
+  margin: 15px 0 0 0;
+  display: flex;
+  justify-content: baseline;
+}
+.todo-list .action-wrapper .delete{
+  padding: 10px 15px;
+  display: flex;
+  border-radius: 15px;
+  border: 2px solid rgb(70, 70, 70);
+  transition: 0.3s ease-in-out;
+}
+.action-wrapper .delete p{
+  margin: 0 10px 0 0;
+}
+.todo-list .action-wrapper .delete:hover{
+  cursor: pointer;
+}

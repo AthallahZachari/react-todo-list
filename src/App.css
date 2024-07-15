@@ -1,3 +1,17 @@
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 body{
   font-family: sans-serif;
   margin: 0;
@@ -18,14 +32,13 @@ body{
 
 /*TODO WRAPPER*/
 .todo-wrapper{
-  min-height: 100vh;
   display: flex;
   justify-content: space-evenly;
 }
 
 .todo-header{
   width: 30%;
-  max-height: 70vh;
+  min-height: 60vh;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -60,14 +73,39 @@ body{
 }
 
 
-.TodoForm .wrapper p{
+.TodoForm .wrapper .error{
   margin: 15px 0 0 0;
   padding: 10px 15px;
-  background-color: rgb(255, 84, 90);
-  border: 2px solid rgb(70, 70, 70);
   border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 147, 151);
+  border: 2px solid rgb(70, 70, 70);
   color: rgb(40, 40, 40);
-  font-weight: 600;
+  animation: bounceIn 0.3 ease-in-out;
+  
+}
+
+.TodoForm .wrapper .error .close-error{
+  padding: 6px 8px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bolder;
+}
+
+.TodoForm .wrapper .error .close-error:hover{
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, .2);
+  transition: 0.3s ease-in-out;
+}
+
+.TodoForm .wrapper .error p{
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: small;
 }
 
 .TodoForm .wrapper .input-wrapper{

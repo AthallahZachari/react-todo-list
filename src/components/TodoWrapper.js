@@ -22,11 +22,14 @@ export const TodoWrapper = () => {
     <div className="todo-wrapper">
       <section className="todo-header">
         <h1>
-          Daily Task <br /> Todays main focus
+          Daily Task 
         </h1>
         <TodoForm addTodo={addTodo} />
       </section>
       <section className="list-wrapper">
+        <nav>
+          <div></div>
+        </nav>
         {todos.map((todo, index) => (
           <Todo
             task={todo}

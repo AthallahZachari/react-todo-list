@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faX } from "@fortawesome/free-solid-svg-icons";
 
 const colorOptions = ["#EBC450", "#B5EBBF", "#EBD89E", "#8698EB", "#EB91A1"];
 
@@ -28,6 +28,10 @@ export const TodoForm = ({ addTodo }) => {
     setIsActive(false);
   };
 
+  const toggleHandler = () => {
+    setIsActive(!isActive);
+  }
+
   return (
     <form className="TodoForm" onSubmit={handleSubmit}>
       <div className="wrapper">
@@ -50,7 +54,14 @@ export const TodoForm = ({ addTodo }) => {
             onChange={(e) => setDesc(e.target.value)}
           ></textarea>
         </section>
-        {isActive && <p>{error}</p>}
+        {isActive && (
+          <section className="error">
+            <p>{error}</p>
+            <div className="close-error" onClick={toggleHandler}>
+              <FontAwesomeIcon icon={faX} />
+            </div>
+          </section>
+        )}
       </div>
       <section className="button-wrapper">
         <button type="submit" className="todo-btn">
